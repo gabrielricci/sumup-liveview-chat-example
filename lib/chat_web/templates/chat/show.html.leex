@@ -1,0 +1,12 @@
+<h2><%= @chat.name %></h2>
+<%=for message <- @chat.messages do %>
+  <p>
+    User: <%= message %>
+  </p>
+<% end %>
+
+<div class="form-group">
+  <form phx-submit="new_message">
+    <input type="text" name="content" placeholder="write your message here..." />
+  </form>
+</div>
